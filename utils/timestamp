@@ -1,0 +1,58 @@
+//
+// Created by GGG1235 on 2019-08-15.
+//
+
+#ifndef HTTP_TIMESTAMP
+#define HTTP_TIMESTAMP
+
+#include <chrono>
+#include "output"
+
+namespace timestamp {
+
+    class TimeStamp{
+    private:
+        struct tm *ptm;
+    public:
+        TimeStamp(){
+            auto tt = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+            this->ptm=localtime(&tt);
+        }
+        int get_year(){
+            return static_cast<int> (this->ptm->tm_year+1900);
+        }
+        int get_mon(){
+            return static_cast<int>(this->ptm->tm_mon+1);
+        }
+        int get_mday(){
+            return static_cast<int>(this->ptm->tm_mday);
+        }
+        int get_hour(){
+            return static_cast<int>(this->ptm->tm_hour);
+        }
+        int get_min(){
+            return static_cast<int>(this->ptm->tm_min);
+        }
+        int get_sec(){
+            return static_cast<int>(this->ptm->tm_sec);
+        }
+        int time_stamp(FILE *fp,const char *arg,...){
+            int res=0;
+            va_list ap;
+            va_start(ap,arg);
+            res=vfprintf(fp,arg,ap);
+            va_end(ap);
+            return res;
+        }
+    };
+
+    std::string time_stamp() {
+        auto tt = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+        struct tm *ptm = localtime(&tt);
+        auto res=opt::format("%d-%02d-%02d  %02d:%02d:%02d",(int) ptm->tm_year + 1900, (int) ptm->tm_mon + 1,
+                    (int) ptm->tm_mday, (int) ptm->tm_hour, (int) ptm->tm_min, (int) ptm->tm_sec);
+        return res;
+    }
+}
+
+#endif //HTTP_TIMESTAMP

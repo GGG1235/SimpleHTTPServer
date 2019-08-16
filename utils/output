@@ -1,0 +1,55 @@
+//
+// Created by GGG1235 on 2019-08-15.
+//
+
+#ifndef HTTP_OUTPUT
+#define HTTP_OUTPUT
+
+#include <string>
+
+#define MAX_FORMAT 1024
+namespace opt {
+    std::string format(const char *arg, ...) {
+        int len = 0;
+        char res[MAX_FORMAT];
+        va_list ap;
+        va_start(ap, arg);
+        len = vsprintf(res, arg, ap);
+        va_end(ap);
+        res[len] = 0;
+        return std::string(res);
+    }
+
+    int output(FILE *fp, const char *arg, ...) {
+        int res;
+        va_list ap;
+        va_start(ap, arg);
+        res = vfprintf(fp, arg, ap);
+        va_end(ap);
+        return res;
+    }
+
+    int outputs(const char *arg, ...) {
+        int res = 0;
+        va_list ap;
+        va_start(ap, arg);
+        res = vfprintf(stdin, arg, ap);
+        va_end(ap);
+        return res;
+    }
+
+    int error_ouputs(const char *arg, ...) {
+        int res = 0;
+        va_list ap;
+        va_start(ap, arg);
+        res = vfprintf(stderr, arg, ap);
+        va_end(ap);
+        return res;
+    }
+
+    void error_handling(const std::string &msg) {
+        error_ouputs("%s\n", msg.c_str());
+        exit(1);
+    }
+}
+#endif //HTTP_OUTPUT

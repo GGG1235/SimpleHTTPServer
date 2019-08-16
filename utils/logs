@@ -1,0 +1,28 @@
+//
+// Created by GGG1235 on 2019-08-15.
+//
+
+#ifndef HTTP_LOG
+#define HTTP_LOG
+
+#include <cstdio>
+#include "output"
+
+namespace log {
+    bool save(const char *log,const char *filepath="/Users/guxukai/Desktop/log.txt"){
+        FILE *fp;
+        fp=fopen(filepath,"a+");
+        if (fp== nullptr){
+            return false;
+        }
+        if(log!= nullptr){
+            opt::output(fp,log);
+        }
+        fclose(fp);
+        return true;
+    }
+    std::string get_log(const char *log){
+        return std::string(log);
+    }
+}
+#endif //HTTP_LOG
