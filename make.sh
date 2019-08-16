@@ -8,4 +8,6 @@ cmake ..
 
 make
 
-cp -rf ../html/error ./
+cd ..
+
+cp -rf ./html/error ./
