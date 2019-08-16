@@ -1,0 +1,46 @@
+[2019-08-16  16:30:29] Connection Request: 127.0.0.1:64344 
+[2019-08-16  16:30:29] [2019-08-16  16:30:29]- GET /index.html HTTP/1.1
+
+[2019-08-16  16:30:29] Connection Request: 127.0.0.1:64345 
+[2019-08-16  16:30:29] [2019-08-16  16:30:29]- GET /favicon.ico HTTP/1.1
+
+[2019-08-16  16:30:29] path error! path: ./html/favicon.ico
+[2019-08-16  16:30:29] open 404.html error! path:../html/error/404.html
+[2019-08-16  16:30:45] Connection Request: 127.0.0.1:64350 
+[2019-08-16  16:30:45] [2019-08-16  16:30:45]- GET /index.html HTTP/1.1
+
+[2019-08-16  16:30:45] Connection Request: 127.0.0.1:64351 
+[2019-08-16  16:30:45] [2019-08-16  16:30:45]- GET /favicon.ico HTTP/1.1
+
+[2019-08-16  16:30:45] path error! path: ./html/favicon.ico
+[2019-08-16  16:30:45] open 404.html error! path:../html/error/404.html
+[2019-08-16  16:30:55] Connection Request: 127.0.0.1:64354 
+[2019-08-16  16:30:55] [2019-08-16  16:30:55]- GET /index.html HTTP/1.1
+
+[2019-08-16  16:30:55] Connection Request: 127.0.0.1:64355 
+[2019-08-16  16:30:55] [2019-08-16  16:30:55]- GET /favicon.ico HTTP/1.1
+
+[2019-08-16  16:30:55] path error! path: ./html/favicon.ico
+[2019-08-16  16:30:55] open 404.html error! path:../html/error/404.html
+[2019-08-16  16:31:18] Connection Request: 127.0.0.1:64356 
+[2019-08-16  16:31:25] bind() error!
+[2019-08-16  16:31:32] Connection Request: 127.0.0.1:64379 
+[2019-08-16  16:31:32] [2019-08-16  16:31:32]- GET /index2.html HTTP/1.1
+
+[2019-08-16  16:31:32] path error! path: ./html/index2.html
+[2019-08-16  16:31:32] open 404.html error! path:../html/error/404.html
+[2019-08-16  16:31:32] Connection Request: 127.0.0.1:64380 
+[2019-08-16  16:31:32] [2019-08-16  16:31:32]- GET /favicon.ico HTTP/1.1
+
+[2019-08-16  16:31:32] path error! path: ./html/favicon.ico
+[2019-08-16  16:31:32] open 404.html error! path:../html/error/404.html
+[2019-08-16  16:33:48] Connection Request: 127.0.0.1:64391 
+[2019-08-16  16:33:48] [2019-08-16  16:33:48]- GET /index2.html HTTP/1.1
+
+[2019-08-16  16:33:48] path error! path: ./html/index2.html
+[2019-08-16  16:33:48] open 404.html error! path:./error/404.html
+[2019-08-16  16:33:48] Connection Request: 127.0.0.1:64392 
+[2019-08-16  16:33:48] [2019-08-16  16:33:48]- GET /favicon.ico HTTP/1.1
+
+[2019-08-16  16:33:48] path error! path: ./html/favicon.ico
+[2019-08-16  16:33:48] open 404.html error! path:./error/404.html
