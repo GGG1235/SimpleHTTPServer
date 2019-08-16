@@ -25,7 +25,7 @@ C++多线程简易http服务器
 
 socket->bind->listen->accept->read/write->close
 
-[Socket](./images/socket.png)
+![Socket](https://github.com/GGG1235/SimpleHTTPServer/blob/master/images/socket.png)
 
 ```shell script
 mkdir build
@@ -46,8 +46,8 @@ cd build
 
 
 #### 截图:
-[img1](./images/img1.png)
-[img2](./images/img2.png)
-[img3](./images/img3.png)
-[img4](./images/img4.png)
-[img5](./images/img5.png)
+![img1](https://github.com/GGG1235/SimpleHTTPServer/blob/master/images/img1.png)
+![img2](https://github.com/GGG1235/SimpleHTTPServer/blob/master/images/img2.png)
+![img3](https://github.com/GGG1235/SimpleHTTPServer/blob/master/images/img3.png)
+![img4](https://github.com/GGG1235/SimpleHTTPServer/blob/master/images/img4.png)
+![img5](https://github.com/GGG1235/SimpleHTTPServer/blob/master/images/img5.png)
